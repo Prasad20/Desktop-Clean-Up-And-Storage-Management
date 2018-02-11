@@ -45,7 +45,7 @@ for i in range(int(s)):
     function(k)
 
 for x in range(10):
-    print (a[x][1],a[x][0])
+    print ('[%s]'"MB "'[%s]' %(a[x][1]/1000000,a[x][0]))
 
 a.clear()
 
@@ -89,6 +89,6 @@ for x in range(len(a)):
     tfilen = ""
     tfilen = str(newpath1) + "\\" + str(temp)
 
-#    os.rename(old, tfilen)
+    os.rename(old, tfilen)
 
 
