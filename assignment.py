@@ -35,9 +35,6 @@ def func(directory):
     for i in range(len(List)):
         a.append([List[i],nlist[i]])
 
-
-    a.sort(key=lambda x:x[1])
-
 s = input("Enter number of Directories you want to look into: ")
 
 for i in range(int(s)):
