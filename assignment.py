@@ -59,7 +59,7 @@ for x in (range(10) or (range(len(a)))):                                # Print 
 
 a.clear()                                                               # Remove all the directories that you appended to search 10 largest files
 
-path = input("Enter your desktop directory or any other directory in which you want to sort the files :")    # path will store the directory in which you want to move the files in a folder
+path = input("Enter your desktop directory or any other directory in which you want to sort the files into a folder :")    # path will store the directory in which you want to move the files in a folder
 
 newpath = input("Enter the directory where you want to move the files :")    # newpath will be store the directory where the files are to be moved
 
@@ -105,3 +105,5 @@ for x in range(len(a)):                                              #this for l
         os.remove(old)                                             #the file in the driectory is removed
 
 print("Your files are successfully moved in the folder called desktop")
+
+sys.exit()
