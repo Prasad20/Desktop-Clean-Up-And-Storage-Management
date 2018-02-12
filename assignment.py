@@ -38,11 +38,10 @@ def setSep(w):
     global seperator
     if w == '1':
         seperator = '\\'
-        print(seperator)
     else:
         seperator = '/'
 
-w = input("Enter 1 for windows and 2 for Linux")
+w = input("Enter 1 for windows and 2 for Linux : ")
 
 setSep(w)
 
@@ -57,7 +56,7 @@ for i in range(int(s)):
 for i in range(int(s)):
     function(l[i])
 
-for x in (range(10) or (range(len(a))):
+for x in (range(10) or (range(len(a)))):
     print('[%s]'"MB "'[%s]' % (a[-1 - x][1] / 1000000, a[-1 - x][0]))
 
 a.clear()
@@ -73,7 +72,7 @@ newpath = s + seperator + "desktop"
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 
-for x in range(len(a))):
+for x in range(len(a)):
     old = a[-1 - x][0]
     temp = old.split(seperator)
     temp = (temp[len(temp) - 1])
