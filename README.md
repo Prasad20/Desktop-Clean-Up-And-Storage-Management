@@ -9,6 +9,8 @@ Now the function ends and the top 10 files will be shown with their size in MB a
 
 Now enter the directory of your desktop: like "C:\Users\PRASAD PARSHALLU\Desktop"
 
+Now enter the Enter the directory where you want to store desktop files: "like C:\Users\PRASAD PARSHALLU\Documents"
+
 Few files with extensions like mp4 are stored in Video folder, png and jpeg are stored in Images folder, txt are stored in text folder and doc are stored WordDocuments folder.
       
 2.Moving the files from desktop to documents(name of the function in code is (func)):-
