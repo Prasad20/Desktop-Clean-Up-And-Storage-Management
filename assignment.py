@@ -37,9 +37,13 @@ def func(directory):
 
 s = input("Enter number of Directories you want to look into: ")
 
+l = []
 for i in range(int(s)):
     k = input("Enter the Directory:")
-    function(k)
+    l.append(k)
+
+for i in range(int(s)):
+    function(l[i])
 
 for x in range(10):
     print ('[%s]'"MB "'[%s]' %(a[-1-x][1]/1000000,a[-1-x][0]))
