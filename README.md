@@ -1,6 +1,6 @@
 # Infra-structure-Assignment
 
-In this program at first you have to first specify total number of directories you want to Look into(atleast one) and then enter the path of directories you want to look into.
+In this program at first you have to specify whether your working on linux or windows then total number of directories you want to Look into(atleast one) and then enter the path of directories you want to look into.
 
 1.Searching for top 10 files(name of the function in code is (function)):-
       In this function first all the file's path in a directory(including subfolders) will be added into a list and then another list will contain the size of files. Then a matrix of path and size will be created and it is sorted according to the size.
