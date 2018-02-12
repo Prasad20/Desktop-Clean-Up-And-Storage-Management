@@ -22,7 +22,7 @@ For example code runs in this manner:-
 
 Enter number of Directories you want to search into:2
 Enter the Directory: C:\Users\PRASAD PARSHALLU\Desktop
-Enter the Directory: C:\Users\PRASAD PARSHALLU\Download
+Enter the Directory: C:\Users\PRASAD PARSHALLU\Downloads
 
 All the 10 largest files or if your directory have less than 10 files then all files will be shown with their size in MB and there path.
 
