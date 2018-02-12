@@ -3,8 +3,6 @@ import sys
 
 a = []
 
-seperator = ""
-
 def function(path):
     List = []
     for dirpath, subdirs, files in os.walk(path):
@@ -37,14 +35,6 @@ def func(directory):
     for i in range(len(List)):
         a.append([List[i],nlist[i]])
 
-        
-w = input("Enter 1 for windows and 2 for Linux")
-
-if (w==1):
-    seperator = "\\"
-elif (w==2):
-    seperator = "/"
-        
 s = input("Enter number of Directories you want to look into: ")
 
 l = []
@@ -66,18 +56,18 @@ s = input("Enter the directory where you want to store desktop files :")
 
 func(p)
 
-newpath = s +seperator+"desktop"
+newpath = s +"\\"+"desktop"
 
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 
 for x in range(len(a)):
     old = a[-1-x][0]
-    temp = old.split(seperator)
+    temp = old.split("\\")
     temp = (temp[len(temp) - 1])
 
     filen = old
-    filen += seperator + temp
+    filen += "\\" + temp
 
     filen = temp.split(".")
     foldn = (filen[len(filen) - 1])
@@ -96,13 +86,13 @@ for x in range(len(a)):
         foldn = "WordDocuments"
 
     newpath1= newpath
-    newpath1 += seperator + foldn
+    newpath1 += "\\" + foldn
 
     if not os.path.exists(newpath1):
         os.makedirs(newpath1)
 
     tfilen = ""
-    tfilen = str(newpath1) + seperator + str(temp)
+    tfilen = str(newpath1) + "\\" + str(temp)
 
     if not os.path.exists(tfilen):
         os.rename(old, tfilen)
