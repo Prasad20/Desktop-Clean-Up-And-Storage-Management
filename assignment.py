@@ -42,7 +42,7 @@ for i in range(int(s)):
     function(k)
 
 for x in range(10):
-    print ('[%s]'"MB "'[%s]' %(a[x][1]/1000000,a[x][0]))
+    print ('[%s]'"MB "'[%s]' %(a[-1-x][1]/1000000,a[-1-x][0]))
 
 a.clear()
 
@@ -91,6 +91,4 @@ for x in range(len(a)):
     if not os.path.exists(tfilen):
         os.rename(old, tfilen)
     else:
-         os.remove(old)
-
-
+        os.remove(old)
