@@ -46,9 +46,11 @@ for x in range(10):
 
 a.clear()
 
-func(r"C:\Users\PRASAD PARSHALLU\Desktop")
+p = input("Enter your desktop directory ")
 
-newpath = r"C:\Users\PRASAD PARSHALLU\Documents\desktop"
+func(p)
+
+newpath = p +"\\"+"desktop"
 
 if not os.path.exists(newpath):
     os.makedirs(newpath)
@@ -77,7 +79,7 @@ for x in range(len(a)):
         foldn =""
         foldn = "WordDocuments"
 
-    newpath1= r"C:\Users\PRASAD PARSHALLU\Documents\desktop"
+    newpath1= newpath
     newpath1 += "\\" + foldn
 
     if not os.path.exists(newpath1):
@@ -86,6 +88,9 @@ for x in range(len(a)):
     tfilen = ""
     tfilen = str(newpath1) + "\\" + str(temp)
 
-    os.rename(old, tfilen)
+    if not os.path.exists(tfilen):
+        os.rename(old, tfilen)
+    else:
+         os.remove(old)
 
 
