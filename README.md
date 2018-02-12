@@ -5,7 +5,7 @@ In this program at first you have to specify whether your working on linux or wi
 1.Searching for top 10 files(name of the function in code is (function)):-
       In this function first all the file's path in a directory(including subfolders) will be added into a list and then another list will contain the size of files. Then a matrix of path and size will be created and it is sorted according to the size.
       
-Now the function ends and the top 10 files or if your directory doesnt files less than 10 then all files will be shown with their size in MB and there path.
+Now the function ends and the top 10 files or if your directory have less than 10 files then all files will be shown with their size in MB and there path.
 
 Now enter the directory of your desktop: like "C:\Users\PRASAD PARSHALLU\Desktop"
 
