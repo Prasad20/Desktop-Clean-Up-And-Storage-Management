@@ -10,4 +10,4 @@ Now the function ends and the top 10 files will be shown with their size in MB a
 2.Moving the files from desktop to documents(name of the function in code is (func)):-
       In this function everything is same as in above function just files in sub-directories, .exe(extension), shortcuts... are exlcuded.
       
-Now function ends and then a folder is created in documents. According to the list path then sub-folders are created with the name of the file as extension of file and if folder or any sub folder already exists then new folder is not created. Later, the files are moved according to there extension in respective folders. This is continued untill whole list is traversed. 
+Now function ends and then a folder is created in documents. According to the list path then sub-folders are created with the name of the file as extension of file and if folder or any sub folder already exists then new folder is not created. Later, the files are moved according to there extension in respective folders and if file already exisits then the copy of file is just removed from desktop. This is continued untill whole list is traversed. 
