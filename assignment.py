@@ -52,9 +52,11 @@ a.clear()
 
 p = input("Enter your desktop directory ")
 
+s = input("Enter the directory where you want to store desktop files :")
+
 func(p)
 
-newpath = p +"\\"+"desktop"
+newpath = s +"\\"+"desktop"
 
 if not os.path.exists(newpath):
     os.makedirs(newpath)
