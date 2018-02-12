@@ -57,7 +57,7 @@ for i in range(int(s)):
 for i in range(int(s)):
     function(l[i])
 
-for x in range(10):
+for x in (range(10) or (range(len(a))):
     print('[%s]'"MB "'[%s]' % (a[-1 - x][1] / 1000000, a[-1 - x][0]))
 
 a.clear()
