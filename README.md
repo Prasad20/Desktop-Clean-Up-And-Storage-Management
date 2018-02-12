@@ -6,6 +6,8 @@ In this program at first you have to first specify total number of directories y
       In this function first all the file's path in a directory(including subfolders) will be added into a list and then another list will contain the size of files. Then a matrix of path and size will be created and it is sorted according to the size.
       
 Now the function ends and the top 10 files will be shown with their size in MB and there path.
+
+Now enter the directory of your desktop: like "C:\Users\PRASAD PARSHALLU\Desktop"
       
 2.Moving the files from desktop to documents(name of the function in code is (func)):-
       In this function everything is same as in above function just files in sub-directories, .exe(extension), shortcuts... are exlcuded.
