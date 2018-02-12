@@ -73,7 +73,7 @@ newpath = s + seperator + "desktop"
 if not os.path.exists(newpath):
     os.makedirs(newpath)
 
-for x in range(len(a)):
+for x in range(len(a))):
     old = a[-1 - x][0]
     temp = old.split(seperator)
     temp = (temp[len(temp) - 1])
