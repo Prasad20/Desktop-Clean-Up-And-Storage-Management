@@ -8,6 +8,8 @@ In this program at first you have to first specify total number of directories y
 Now the function ends and the top 10 files will be shown with their size in MB and there path.
 
 Now enter the directory of your desktop: like "C:\Users\PRASAD PARSHALLU\Desktop"
+
+Few files with extensions like mp4 are stored in Video folder, png and jpeg are stored in Images folder, txt are stored in text folder and doc are stored WordDocuments folder
       
 2.Moving the files from desktop to documents(name of the function in code is (func)):-
       In this function everything is same as in above function just files in sub-directories, .exe(extension), shortcuts... are exlcuded.
