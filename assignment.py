@@ -10,7 +10,8 @@ def search_in_directory(path):
     pList = []                                                   #pList will store the path of file
     for dirpath, subdirs, files in os.walk(path):               # for loop to search files in sub-folders
         for x in files:
-            pList.append(os.path.join(dirpath, x))
+             if (x != "assignment.py"):
+                pList.append(os.path.join(dirpath, x))
 
     sList = []                                                  #slist[] will store the size of file
     for file in pList:                                           # for loop to store size of files in List "pList"
