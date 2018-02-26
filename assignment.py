@@ -8,16 +8,15 @@ seperator = ""                                                  # As seperator i
 
 def search_in_directory(path):
 
-    pList = []                                                   #pList will store the path of file
+    pList = []  # pList will store the path of file
 
-    sList = []                                                  #slist[] will store the size of file
+    sList = []  # slist[] will store the size of file
 
-    for dirpath, subdirs, files in os.walk(path):               # for loop to search files in sub-folders
+    for dirpath, subdirs, files in os.walk(path):  # for loop to search files in sub-folders
         for x in files:
-             if (x != "assignment.py"):
-                d = os.path.join(dirpath, x)
-                pList.append(d)
-                sList.append(os.stat(d).st_size)
+            d = os.path.join(dirpath, x)
+            pList.append(d)
+            sList.append(os.stat(d).st_size)
 
     for i in range(len(pList)):                                  # for loop to append path and size of file in list "a"
         a.append([pList[i], sList[i]])
