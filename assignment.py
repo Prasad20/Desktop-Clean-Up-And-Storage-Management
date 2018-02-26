@@ -1,33 +1,40 @@
 import os
-import sys
 import platform
+import sys
 
 a = []                                                          # stores the path and size of file in 2d matrix format
 
 seperator = ""                                                  # As seperator in windows and other os are different
 
 def search_in_directory(path):
-
-    pList = []  # pList will store the path of file
-
-    sList = []  # slist[] will store the size of file
-
-    for dirpath, subdirs, files in os.walk(path):  # for loop to search files in sub-folders
+    pList = []                                                   #pList will store the path of file
+    for dirpath, subdirs, files in os.walk(path):               # for loop to search files in sub-folders
         for x in files:
-            d = os.path.join(dirpath, x)
-            pList.append(d)
-            sList.append(os.stat(d).st_size)
+            if (x != "assignment.py"):
+                pList.append(os.path.join(dirpath, x))
+
+    sList = []                                                  #slist[] will store the size of file
+    for file in pList:                                           # for loop to store size of files in List "pList"
+        sList.append(os.stat(file).st_size)
 
     for i in range(len(pList)):                                  # for loop to append path and size of file in list "a"
         a.append([pList[i], sList[i]])
 
     a.sort(key=lambda x: x[1])                                   # sort the List "a" w.r.t size
 
-def files_in_directory(directory):                                                  # pList will store the path of file
+def files_in_directory(directory):
+    pList = []                                                   # pList will store the path of file
     for file in os.listdir(directory):                          # for loop to search files in directory
-        filename = os.fsdecode(file)
-        if not (filename.endswith(".exe") or filename.endswith(".lnk") or os.path.isdir(directory + "/" + file)):
-            a.append(os.path.join(directory, filename))
+        if not (file.endswith(".exe") or file.endswith(".lnk") or file.endswith("assignment.py") or os.path.isdir(directory + "/" + file)):
+            pList.append(os.path.join(directory, file))
+
+    slist = []                                                   #slist[] will store the size of file
+    for file in pList:                                            # for loop to store size of files in List "pList"
+        slist.append(os.stat(file).st_size)
+
+    for i in range(len(pList)):                                    # for loop to append path and size of file in list "a"
+        a.append([pList[i], slist[i]])
+
 
 # Program starts from here
 
@@ -47,14 +54,12 @@ for i in range(int(s)):                                                 # append
 for i in range(int(s)):                                                 # for loop will call function to search in directory for all directories you want entered before
     search_in_directory(l[i])                                           # this function will store all the files path and size in the given directory and in its sub-folders in list a
 
-for x in (range(10)):
-    if(x>=(len(a))):                                # Print 10 largest files in the directory or if files are less than 10 then print them all with their size in MB
-        break
+for x in (range(10) or (range(len(a)))):                                # Print 10 largest files in the directory or if files are less than 10 then print them all with their size in MB
     print('[%s]'"MB "'[%s]' % (a[-1 - x][1] / 1000000, a[-1 - x][0]))
 
 a.clear()                                                               # Remove all the directories that you appended to search 10 largest files
 
-path = input("Enter your desktop directory or any other directory in which you want to sort the files :")    # path will store the directory in which you want to move the files in a folder
+path = input("Enter your desktop directory or any other directory in which you want to sort the files into a folder :")    # path will store the directory in which you want to move the files in a folder
 
 newpath = input("Enter the directory where you want to move the files :")    # newpath will be store the directory where the files are to be moved
 
@@ -66,7 +71,7 @@ if not os.path.exists(newpath):                                     # if desktop
     os.makedirs(newpath)
 
 for x in range(len(a)):                                              #this for loop will search all the files appended in list "a"
-    old = a[-1 - x]                                               # old will store the path of the file
+    old = a[-1 - x][0]                                               # old will store the path of the file
     temp = old.split(seperator)                                      # temp will store the file name with the extension
     temp = (temp[len(temp) - 1])
 
