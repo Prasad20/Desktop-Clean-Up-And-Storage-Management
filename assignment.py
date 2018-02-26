@@ -7,14 +7,17 @@ a = []                                                          # stores the pat
 seperator = ""                                                  # As seperator in windows and other os are different
 
 def search_in_directory(path):
+
     pList = []                                                   #pList will store the path of file
-    for dirpath, subdirs, files in os.walk(path):               # for loop to search files in sub-folders
-        for x in files:
-            pList.append(os.path.join(dirpath, x))
 
     sList = []                                                  #slist[] will store the size of file
-    for file in pList:                                           # for loop to store size of files in List "pList"
-        sList.append(os.stat(file).st_size)
+
+    for dirpath, subdirs, files in os.walk(path):               # for loop to search files in sub-folders
+        for x in files:
+             if (x != "assignment.py"):
+                d = os.path.join(dirpath, x)
+                pList.append(d)
+                sList.append(os.stat(d).st_size)
 
     for i in range(len(pList)):                                  # for loop to append path and size of file in list "a"
         a.append([pList[i], sList[i]])
