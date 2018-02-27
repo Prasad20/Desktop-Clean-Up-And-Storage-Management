@@ -24,8 +24,7 @@ def search_in_directory(path):
     a.sort(key=lambda x: x[1])                                   # sort the List "a" w.r.t size
 
 def files_in_directory(directory):                                                  # pList will store the path of file
-    for file in os.listdir(directory):                          # for loop to search files in directory
-        filename = os.fsdecode(file)
+    for filename in os.listdir(directory):                          # for loop to search files in directory
         if not (filename.endswith(".exe") or filename.endswith(".lnk") or os.path.isdir(directory + "/" + file)):
             a.append(os.path.join(directory, filename))
 
