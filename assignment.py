@@ -25,7 +25,7 @@ def search_in_directory(path):
 
 def files_in_directory(directory):                                                  # pList will store the path of file
     for filename in os.listdir(directory):                          # for loop to search files in directory
-        if not (filename.endswith(".exe") or filename.endswith(".lnk") or os.path.isdir(directory + "/" + file)):
+        if not (filename.endswith(".exe") or filename.endswith(".lnk") or os.path.isdir(directory + "/" + filename)):
             a.append(os.path.join(directory, filename))
 
 # Program starts from here
