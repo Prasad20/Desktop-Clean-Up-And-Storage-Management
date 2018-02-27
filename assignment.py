@@ -46,8 +46,8 @@ for i in range(int(s)):                                                 # append
 for i in range(int(s)):                                                 # for loop will call function to search in directory for all directories you want entered before
     search_in_directory(l[i])                                           # this function will store all the files path and size in the given directory and in its sub-folders in list a
 
-for x in (range(10)):
-    if(x>=(len(a))):                                # Print 10 largest files in the directory or if files are less than 10 then print them all with their size in MB
+for x in (range(len(a))):
+    if(x >= 10):                                # Print 10 largest files in the directory or if files are less than 10 then print them all with their size in MB
         break
     print('[%s]'"MB "'[%s]' % (a[-1 - x][1] / 1000000, a[-1 - x][0]))
 
