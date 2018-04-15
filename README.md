@@ -1,5 +1,5 @@
-# Infra-structure-Assignment
-
+# Replace files from form the directory to other(clean desktop) and to search the top 10 Largest files.
+ 
 In this program at first you have to specify the total number of directories you want to look into(atleast one) and then enter the path of directories you want to look into.
 
 1.Searching for top 10 files(name of the function in code is (search_in_directory)):-
